@@ -9,16 +9,16 @@ body {
 	height: 100%;
 	width: 100%;
 }
-h1 {
-	font-size: 25px;
-	font-weight: bold;
-	margin: 0 0 4px 0;
-	color: #fff;
-}
-h6 {
-	font-weight: bold;
-	margin: 0 0 5px 0;
-}
+
+/* Headers
+------------------------------------------------------------ */
+h1 { font-size: 25px; font-weight: bold; margin: 0 0 4px 0; color: #fff; }
+h2 { font-size: 16px; font-weight: bold; line-height: 18px; }
+h3 { font-weight: bold; font-size: 14px; color: #FFF; margin: 0 0 5px 0; }
+h5 { font-weight: bold; margin: 0 0 8px 0; font-size: 14px; }
+h5.kurs { border-top: 1px dotted #888; padding: 15px 0; }
+h6 { font-weight: bold; margin: 0 0 5px 0; }
+
 .hide {
 
 }
@@ -109,7 +109,6 @@ img#partner {
 
 footer {
 	clear: both;
-	margin: 50px 0 0 0;
 	text-align: center;
 }
 
@@ -168,12 +167,6 @@ footer p {
 
 .mer p {
 	line-height: 20px;
-}
-h3 {
-	font-weight: bold;
-	font-size: 14px;
-	color: #FFF;
-	margin: 0 0 5px 0;
 }
 
 
@@ -246,22 +239,87 @@ footer {
 	clear: both;
 }
 
-h2 {
-	font-size: 16px;
-	font-weight: bold;
-	line-height: 18px;
-}
-
-
-
 
 
 
 
 article.cal {
-	width: 820px;
+	width: 900px;
 }
 
+.cal-left,
+.cal-right {
+	height: 360px;
+}
+.cal-left {
+	margin: 5px 0;
+	float: left;
+	width: 260px;
+	font-size: 11px;
+	font-weight: 100;
+	font-family: helvetica, sans-serif;
+}
+.cal-right {
+	margin: 50px 0;
+	box-sizing: border-box;
+	padding: 0 0 0 300px;
+	font-size: 12px;
+	line-height: 20px;
+}
+
+.cal-left ul {
+	font-size: 12px;
+	position: absolute;
+}
+.cal-left ul li {
+	background: rgba(0, 0, 0, 0.4);
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	padding: 0 0 0 10px;
+	color: #FFF;
+	width: 260px;
+	line-height: 28px;
+	font-size: 11px;
+}
+.cal-left ul li:last-child,
+.cal-left ul li.inactive {
+	border: none;
+}
+.cal-left ul li.active {
+	background: rgba(0, 0, 0, 0.8);
+}
+.cal-left ul li.inactive,
+.cal-left ul li.inactive:hover {
+	color: rgba(255, 255, 255, 0.6);
+	background: rgba(0, 0, 0, 0);
+	cursor: auto;
+}
+.cal-left ul li.inactive:hover:after {
+	border: 0;
+}
+
+.cal-left ul li:hover {
+	background: rgba(0, 0, 0, 0.8);
+	cursor: pointer;
+}
+
+.cal-left ul li.active:after,
+.cal-left ul li:hover:after {
+	position: absolute;
+	right: -14px;
+	content: ' ';
+	width: 0;
+	height: 0; 
+	border-top: 14px solid transparent;
+	border-bottom: 14px solid transparent;
+	border-left: 14px solid rgba(0,0,0,0.8);
+}
+.cal-right h2 {
+	padding: 35px 0 0 0;
+	margin: 0 0 10px 0;
+	color: #FFF;
+}
+
+/*
 article.cal ul li {
 	font-size: 14px;
 	line-height: 22px;
@@ -316,19 +374,17 @@ article.cal ul li div {
 	border-radius: 8px;
 }
 
-
-
 article.cal ul li > p {
 	line-height: 18px;
 	height: 30px;
 	overflow: visible;
 }
-
+*/
 article.cal h1 {
 	position: absolute;
 	top: -100px;
-	right: 90px;
-	font-size: 35px;
+	right: 40px;
+	font-size: 32px;
 	margin-top: 110px;
 }
 
@@ -385,16 +441,6 @@ article.cal h4 {
 	margin: -262px -410px 0 0;
 	cursor: pointer;
 	z-index: 10;
-}
-
-h5 {
-	font-weight: bold;
-	margin: 0 0 8px 0;
-	font-size: 14px;
-}
-h5.kurs {
-	border-top: 1px dotted #888;
-	padding: 15px 0;
 }
 
 
