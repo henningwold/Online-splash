@@ -3,23 +3,16 @@ This splash site is a project related to the semester start for the new computer
 Developers and contributors:
 ------------------------------------------------
 
-* Christian Strand Young
-Project lead, code, grahpics.
+* Christian Strand Young (Project lead, code, grahpics)
 
-* Tri Minh Nguyen
-Code, graphics.
+* Tri Minh Nguyen (Code, graphics)
 
-* Beate Hay Sandmo
-Illustrations
+* Beate Hay Sandmo (Illustrations)
 
-* René Raisänen
-Background picture
+* René Raisänen (Background picture)
 
-* Henning Wold
-Code
+* Henning Wold (Code)
 
-* Torkil Gustavsen
-Code
+* Torkil Gustavsen (Code)
 
-* Michale Johansen
-Code
+* Michale Johansen (Code)
