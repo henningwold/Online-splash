@@ -395,7 +395,36 @@ h5 {
 h5.kurs {
 	border-top: 1px dotted #888;
 	padding: 15px 0;
-	
 }
 
+
+/* Footer
+------------------------------------------------------------ */
+#footer_online {
+  font-size: 23px;
+  position: relative;
+  top: 43px;
+  left: 300px;
+  width: 200px;
+}
+#footer_online span {
+  display: block;
+  font-size: 12px;
+}
+#footer_online img { float: right; }
+#footer_online a {
+  color: #FFF;
+}
+#footer_online a:hover {
+  color: #AAA;
+}
+.visma {
+  margin: 0 0 0 250px;
+}
+#partner {
+  height: 42px;
+}
+
+/* Utils
+------------------------------------------------------------ */
 .clear { clear: both; }
