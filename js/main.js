@@ -65,21 +65,21 @@ change_page = function(name) {
 lastClick = $('#link_online');
 
 switch (pageRequest) {
-  case 'join':                change_page('join');    break;
-  case 'mer':                 change_page('mer');     break;
+  case 'join':                change_page('join');        break;
+  case 'mer':                 change_page('mer');         break;
   case 'fadderukene':         change_page('fadderukene'); break;
-  case 'cal':                 change_page('cal');     break;
+  case 'cal':                 change_page('cal');         break;
   default:
     change_page('online');
 }
 
 $('nav a').click(function(event) {
   switch (this.id) {
-    case 'link_online':       change_page('online');    break
-    case 'link_join':         change_page('join');    break;
+    case 'link_online':       change_page('online');      break
+    case 'link_join':         change_page('join');        break;
     case 'link_fadderukene':  change_page('fadderukene'); break;
-    case 'link_mer':          change_page('mer');     break;
-    case 'link_cal':          change_page('cal');     break;
+    case 'link_mer':          change_page('mer');         break;
+    case 'link_cal':          change_page('cal');         break;
 
     default:
       change_page('online');
@@ -88,6 +88,28 @@ $('nav a').click(function(event) {
 
 var isIOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
 var click_event = isIOS ? 'touchend' : 'click';
+var active = 0;
+
+$('.cal-left ul').children('li').each(function () {
+  var date = new Date();
+  var today = parseInt(date.getMonth()+''+date.getDate());
+  console.log(today);
+
+  if (parseInt($(this).data('date')) < today) {
+    $(this).addClass('inactive');
+  }
+  
+  if (parseInt($(this).data('date')) === today) {
+    $(this).addClass('active');
+    $('#cal-content').html($('article', this).html());
+    active = 1;
+  }
+});
+
+if (active === 0) {
+  $('.cal-left ul li:first-child').addClass('active');
+  $('#cal-content').html($('.cal-left ul li:first-child article').html());
+}
 
 $(document).on(click_event, '.cal-left ul li', function (e) {
   if ($(this).hasClass('inactive')) return;
@@ -96,21 +118,11 @@ $(document).on(click_event, '.cal-left ul li', function (e) {
 
   $('#cal-content').fadeOut(100, function () {
     $('#cal-content').html($('article', that).html()).fadeIn(100);
-  });
 
-  $('.cal-left ul').children('li').each(function () {
-    $(this).removeClass('active');
-  });
+    $('.cal-left ul').children('li').each(function () {
+      $(this).removeClass('active');
+    });
 
-  $(this).addClass('active');
+    $(that).addClass('active');
+  });
 });
-
-// if (isIOS) {
-//   $(document).on(click_event, '.cal li', function() {
-//     var isHidden = $('div', this).hasClass('hidden');
-//     $('.calendar li div').addClass('hidden');
-//     if (isHidden) {
-//       $('div', this).removeClass('hidden');
-//     }
-//   });
-// }
