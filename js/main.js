@@ -2,9 +2,9 @@ var lastClick
 , docLocHref    = document.location.href
 , pageRequest   = docLocHref.substring(docLocHref.indexOf('#') + 1, docLocHref.length)
 , open_window
-, change_page;
-  
-
+, change_page
+, date          = new Date()
+, today         = parseInt(date.getMonth()+''+date.getDate());
 
 open_window = function (section_id) {
   var guide_background    = document.createElement('div')
@@ -42,7 +42,7 @@ open_window = function (section_id) {
     e.stopPropagation();
   });
   innerScroll = new iScroll(guide_inner);
-}
+};
 
 change_page = function(name) {
   
@@ -53,15 +53,31 @@ change_page = function(name) {
   lastClick.removeClass('on');
   lastClick = $('#link_'+name);
   lastClick.addClass('on');
-}
+
+  var active = 0;
+  if (name === 'cal') {
+    $('.cal-left ul li').each(function () {
+      if ($(this).data('date') === today) {
+        $(this).addClass('active');
+        $('#cal-content').html($('article', this).html());
+        active = 1;
+      }
+    });
+
+    if (active === 0) {
+      $('.cal-left ul li:first-child').addClass('active');
+      $('#cal-content').html($('.cal-left ul li:first-child article').html());
+    }
+  }
+};
+
+update_page = function (name) {
+  $('#'+name).html($('#content').html());
+};
 
 
-
-
-
-
-
-
+/* Stuff bellow --- functions above
+-------------------------------------------------------------- */
 lastClick = $('#link_online');
 
 switch (pageRequest) {
@@ -86,30 +102,16 @@ $('nav a').click(function(event) {
   }
 });
 
-var isIOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
-var click_event = isIOS ? 'touchend' : 'click';
-var active = 0;
+var isIOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/)
+, click_event = isIOS ? 'touchend' : 'click'
+, active = 0;
 
 $('.cal-left ul').children('li').each(function () {
-  var date = new Date();
-  var today = parseInt(date.getMonth()+''+date.getDate());
-  console.log(today);
-
   if (parseInt($(this).data('date')) < today) {
     $(this).addClass('inactive');
   }
-  
-  if (parseInt($(this).data('date')) === today) {
-    $(this).addClass('active');
-    $('#cal-content').html($('article', this).html());
-    active = 1;
-  }
 });
 
-if (active === 0) {
-  $('.cal-left ul li:first-child').addClass('active');
-  $('#cal-content').html($('.cal-left ul li:first-child article').html());
-}
 
 $(document).on(click_event, '.cal-left ul li', function (e) {
   if ($(this).hasClass('inactive')) return;
