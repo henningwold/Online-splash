@@ -262,9 +262,10 @@ article.cal {
 .cal-right {
 	margin: 50px 0;
 	box-sizing: border-box;
-	padding: 0 0 0 300px;
+	padding: 0 0 0 40px;
 	font-size: 12px;
 	line-height: 20px;
+	overflow: scroll;
 }
 
 .cal-left ul {
@@ -478,3 +479,14 @@ article.cal h4 {
 /* Utils
 ------------------------------------------------------------ */
 .clear { clear: both; }
+
+
+#cal-content::-webkit-scrollbar {
+    -webkit-appearance: none!important;
+    width: 7px!important;
+}
+#cal-content::-webkit-scrollbar-thumb {
+    border-radius: 4px!important;
+    background-color: rgba(0,0,0,.5)!important;
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5)!important;
+}
