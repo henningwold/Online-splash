@@ -319,6 +319,10 @@ article.cal {
 	color: #FFF;
 }
 
+.cal li article {
+	display: none;
+}
+
 /*
 article.cal ul li {
 	font-size: 14px;
