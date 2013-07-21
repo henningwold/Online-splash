@@ -90,15 +90,27 @@ var isIOS = navigator.userAgent.match(/(iPod|iPhone|iPad)/);
 var click_event = isIOS ? 'touchend' : 'click';
 
 $(document).on(click_event, '.cal-left ul li', function (e) {
-  $('#cal-content').html($('article', this).html());
+  if ($(this).hasClass('inactive')) return;
+
+  var that = this;
+
+  $('#cal-content').fadeOut(100, function () {
+    $('#cal-content').html($('article', that).html()).fadeIn(100);
+  });
+
+  $('.cal-left ul').children('li').each(function () {
+    $(this).removeClass('active');
+  });
+
+  $(this).addClass('active');
 });
 
-if (isIOS) {
-  $(document).on(click_event, '.cal li', function() {
-    var isHidden = $('div', this).hasClass('hidden');
-    $('.calendar li div').addClass('hidden');
-    if (isHidden) {
-      $('div', this).removeClass('hidden');
-    }
-  });
-}
+// if (isIOS) {
+//   $(document).on(click_event, '.cal li', function() {
+//     var isHidden = $('div', this).hasClass('hidden');
+//     $('.calendar li div').addClass('hidden');
+//     if (isHidden) {
+//       $('div', this).removeClass('hidden');
+//     }
+//   });
+// }
