@@ -252,7 +252,7 @@ article.cal {
 	height: 360px;
 }
 .cal-left {
-	margin: 5px 0;
+	margin: 50px 0;
 	float: left;
 	width: 260px;
 	font-size: 11px;
@@ -271,15 +271,36 @@ article.cal {
 .cal-left ul {
 	font-size: 12px;
 	position: absolute;
+	width: 360px;
+	
 }
 .cal-left ul li {
-	background: rgba(0, 0, 0, 0.4);
+	/*background: rgba(0, 0, 0, 0.4);
 	border-bottom: 1px solid rgba(255,255,255,0.1);
 	padding: 0 0 0 10px;
 	color: #FFF;
 	width: 260px;
 	line-height: 28px;
-	font-size: 11px;
+	font-size: 11px;*/
+	background: url(../graphics/gradient.png);
+	height: 65px;
+	width: 92px;
+	float: left;
+	margin: 0 1px 1px 0;
+	font-weight: bold;
+	padding: 4px 0 0 0;
+	box-sizing: border-box;
+}
+.cal-left ul li span {
+	text-align: center;	
+	display: block;
+	color: #ff7800;
+	
+}
+.cal-left ul li span span {
+	font-size: 38px;
+	margin: 1px 0 0 0;
+	color: #FFF;
 }
 .cal-left ul li:last-child,
 .cal-left ul li.inactive {
@@ -287,6 +308,7 @@ article.cal {
 }
 .cal-left ul li.active {
 	background: rgba(0, 0, 0, 0.8);
+	
 }
 .cal-left ul li.inactive,
 .cal-left ul li.inactive:hover {
@@ -294,15 +316,17 @@ article.cal {
 	background: rgba(0, 0, 0, 0);
 	cursor: auto;
 }
+/*
 .cal-left ul li.inactive:hover:after {
 	border: 0;
 }
+*/
 
 .cal-left ul li:hover {
 	background: rgba(0, 0, 0, 0.8);
 	cursor: pointer;
 }
-
+/*
 .cal-left ul li.active:after,
 .cal-left ul li:hover:after {
 	position: absolute;
@@ -314,6 +338,7 @@ article.cal {
 	border-bottom: 14px solid transparent;
 	border-left: 14px solid rgba(0,0,0,0.8);
 }
+*/
 .cal-right h2 {
 	padding: 35px 0 0 0;
 	margin: 0 0 10px 0;
