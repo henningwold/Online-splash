@@ -44,7 +44,7 @@ a:hover {
 	top: 50%;
 	left: 50%;
 	margin-left: -480px;
-	margin-top: -260px;
+	margin-top: -320px;
 	text-align: left;
 }
 
@@ -233,10 +233,6 @@ a:hover#facebook {
 .mid_text {
 	float: left;
 	margin: 15px 18px 0 0;
-}
-
-footer {
-	clear: both;
 }
 
 
@@ -514,4 +510,35 @@ article.cal h4 {
     border-radius: 4px!important;
     background-color: rgba(0,0,0,.5)!important;
     -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5)!important;
+}
+
+
+
+
+
+
+#partners {
+	margin: 25px 0 0 90px;
+}
+#partners h1 {
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0 0 0 0;
+	text-decoration: underline;
+}
+#partners a {
+	margin: 0 35px 0 0;
+}
+#partners img:last-child {
+	margin: 0;
+}
+
+.partners_knowit {
+	height: 50px;
+}
+.partners_computas {
+	height: 50px;
+}
+.partners_steria {
+	height: 70px;
 }
