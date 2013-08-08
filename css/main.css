@@ -38,21 +38,19 @@ a:hover {
 }
 #container {
 	width: 960px;
-	height: 520px;
+	height: 640px;
 	margin: 0 auto;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	margin-left: -480px;
 	margin-top: -320px;
-	text-align: left;
 }
 
 
 nav {
 	clear: both;
-	width: 740px;
-	margin: 0 0 0 160px;
+	margin: 0 0 0 55px;
 	font-size: 11px;
 	height: 10px;
 	
@@ -75,6 +73,16 @@ nav a:hover {
 	border-color: #ddd; /* #ddd */
 	cursor: pointer;
 }
+nav #hovedsiden {
+	color: orange;
+	border-color: orange;
+	font-weight: bold;
+}
+
+nav #hovedsiden:hover {
+	color: #fff;
+	border-color: #fff;
+}
 
 article {
 	height: 420px;
@@ -91,7 +99,7 @@ article h1 {
 }
 
 body {
-	text-align: center;
+
 }
 img.logo {
 	position: absolute;
@@ -108,13 +116,13 @@ img#partner {
 }
 
 footer {
+	margin: 50px 0 0 0;
 	clear: both;
 	text-align: center;
 }
 
 footer p {
 	font-size: 11px;
-	margin: 10px 0 0 0;
 	color: #314d63;
 }
 
@@ -138,14 +146,13 @@ footer p {
 .mer {
 	background: url(../graphics/mer.jpg) no-repeat 0 100px;
 	background-size: 350px;
-	width: 860px;
+	width: 890px;
 }
 
 .mer .left,
 .mer .mid,
 .mer .right,
 .bedrift {
-	
 	font-size: 12px;
 }
 .mer .left,
@@ -271,13 +278,6 @@ article.cal {
 	
 }
 .cal-left ul li {
-	/*background: rgba(0, 0, 0, 0.4);
-	border-bottom: 1px solid rgba(255,255,255,0.1);
-	padding: 0 0 0 10px;
-	color: #FFF;
-	width: 260px;
-	line-height: 28px;
-	font-size: 11px;*/
 	background: url(../graphics/gradient.png);
 	height: 65px;
 	width: 92px;
@@ -312,29 +312,13 @@ article.cal {
 	background: rgba(0, 0, 0, 0);
 	cursor: auto;
 }
-/*
-.cal-left ul li.inactive:hover:after {
-	border: 0;
-}
-*/
+
 
 .cal-left ul li:hover {
 	background: rgba(0, 0, 0, 0.8);
 	cursor: pointer;
 }
-/*
-.cal-left ul li.active:after,
-.cal-left ul li:hover:after {
-	position: absolute;
-	right: -14px;
-	content: ' ';
-	width: 0;
-	height: 0; 
-	border-top: 14px solid transparent;
-	border-bottom: 14px solid transparent;
-	border-left: 14px solid rgba(0,0,0,0.8);
-}
-*/
+
 .cal-right h2 {
 	padding: 35px 0 0 0;
 	margin: 0 0 10px 0;
@@ -345,67 +329,6 @@ article.cal {
 	display: none;
 }
 
-/*
-article.cal ul li {
-	font-size: 14px;
-	line-height: 22px;
-	width: 150px;
-	height: 70px;
-	background: transparent url(../graphics/gradient.png) repeat-x;
-	color: #FFF;
-	padding: 5px 15px;
-	margin: 1px;
-	float: left;
-}
-
-article.cal ul li.pm {
-	background: transparent url(../graphics/gradient_pm.png) repeat-x !important;
-}
-
-article.cal ul li:hover {
-	background: transparent url(../graphics/gradient_hover.png) repeat-x;
-}
-
-article.cal ul li:hover.pm {
-	background: transparent url(../graphics/gradient_hover_pm.png) repeat-x !important;
-}
-
-article.cal ul li span {
-	float: right;
-	color: #ff7800;
-	width: 150px;
-	margin-bottom: 5px;
-	text-align: right;
-	text-transform: uppercase;
-	font-size: 12px;
-	font-weight: bold;
-}
-
-article.cal ul {
-	margin: 50px 0 0 0;
-}
-
-article.cal ul li div {
-	position: relative;
-	margin: 52px 0 0  -180px;
-	z-index: 10;
-	padding: 20px;
-	background: rgba(0, 0, 0, 0.9);
-	background-image: url(../graphics/up-arrow.png);
-	background-repeat: no-repeat;
-	background-position: 150px 0;
-	width: 500px;
-	color: #FFF;
-	font-size: 12px;
-	border-radius: 8px;
-}
-
-article.cal ul li > p {
-	line-height: 18px;
-	height: 30px;
-	overflow: visible;
-}
-*/
 article.cal h1 {
 	position: absolute;
 	top: -100px;
@@ -444,7 +367,6 @@ article.cal h4 {
 	left: 50%;
 	margin: -250px 0 0 -400px;
 	background: #FFF url(../graphics/concrete.png);
-	text-align: left;
 }
 .guide_inner {
 	padding: 40px 40px;
@@ -491,10 +413,10 @@ article.cal h4 {
   color: #AAA;
 }
 .visma {
-  margin: 0 0 0 250px;
+  margin: 0 0 0 0;
 }
 #partner {
-  height: 42px;
+  height: 47px;
 }
 
 /* Utils
@@ -518,16 +440,22 @@ article.cal h4 {
 
 
 #partners {
-	margin: 25px 0 0 90px;
+	margin: 25px 0 0 0;
 }
 #partners h1 {
-	font-size: 12px;
-	font-weight: normal;
-	margin: 0 0 0 0;
-	text-decoration: underline;
+	font-size: 11px;
+	font-weight: 100;
+	margin: 0 0 -10px 0;
+	color: rgba(255, 255, 255, 0.6);
 }
 #partners a {
 	margin: 0 35px 0 0;
+}
+#partners a img {
+	opacity: 0.5;
+}
+#partners a:hover img {
+	opacity: 1.0;
 }
 #partners img:last-child {
 	margin: 0;
