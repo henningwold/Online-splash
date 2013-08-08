@@ -96,6 +96,7 @@ $('nav a').click(function(event) {
     case 'link_fadderukene':  change_page('fadderukene'); break;
     case 'link_mer':          change_page('mer');         break;
     case 'link_cal':          change_page('cal');         break;
+    case 'hovedsiden':                                    break;
 
     default:
       change_page('online');
